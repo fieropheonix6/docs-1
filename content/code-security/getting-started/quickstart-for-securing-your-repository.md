@@ -48,17 +48,13 @@ From the main page of your repository, click **{% octicon "gear" aria-hidden="tr
 
 {% data reusables.dependabot.dependabot-alerts-dependency-graph-enterprise %}
 
-For more information, see [AUTOTITLE](/code-security/supply-chain-security/understanding-your-software-supply-chain/exploring-the-dependencies-of-a-repository#enabling-and-disabling-the-dependency-graph-for-a-private-repository).
+For more information, see [AUTOTITLE](/code-security/supply-chain-security/understanding-your-software-supply-chain/exploring-the-dependencies-of-a-repository#enabling-and-disabling-the-dependency-graph).
 
 ## Managing {% data variables.product.prodname_dependabot_alerts %}
 
 {% data variables.product.prodname_dependabot_alerts %} are generated when {% data variables.product.prodname_dotcom %} identifies a dependency in the dependency graph with a vulnerability. {% ifversion fpt or ghec %}You can enable {% data variables.product.prodname_dependabot_alerts %} for any repository.{% endif %}
 
-{% ifversion dependabot-auto-triage-rules %}
-
 {% data reusables.dependabot.dependabot-alert-rules %}
-
-{% endif %}
 
 {% data reusables.dependabot.quickstart-link %}
 

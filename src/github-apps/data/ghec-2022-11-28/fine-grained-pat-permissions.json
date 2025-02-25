@@ -755,6 +755,24 @@
       },
       {
         "category": "orgs",
+        "slug": "get-organization-ruleset-history",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "orgs",
+        "slug": "get-organization-ruleset-version",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "orgs",
         "slug": "list-security-manager-teams",
         "subcategory": "security-managers",
         "verb": "get",
@@ -1666,7 +1684,7 @@
     "displayTitle": "Organization permissions for \"Network configurations\"",
     "permissions": [
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "list-hosted-compute-network-configurations-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -1675,7 +1693,7 @@
         "access": "read"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "create-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "post",
@@ -1684,7 +1702,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "get-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -1693,7 +1711,7 @@
         "access": "read"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "update-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "patch",
@@ -1702,7 +1720,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "delete-a-hosted-compute-network-configuration-from-an-organization",
         "subcategory": "network-configurations",
         "verb": "delete",
@@ -1711,7 +1729,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "get-a-hosted-compute-network-settings-resource-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -4179,6 +4197,24 @@
         "subcategory": "rules",
         "verb": "delete",
         "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "repos",
+        "slug": "get-repository-ruleset-history",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "repos",
+        "slug": "get-repository-ruleset-version",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}",
         "additional-permissions": false,
         "access": "write"
       },

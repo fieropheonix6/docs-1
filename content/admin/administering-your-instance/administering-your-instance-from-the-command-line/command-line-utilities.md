@@ -543,6 +543,16 @@ This utility returns webhook delivery logs for administrators to review and iden
 ghe-webhook-logs
 ```
 
+To show all hook deliveries filtered by a given event:
+
+```shell
+ghe-webhook-logs --event issues
+```
+
+To show all hook deliveries filtered by a given event and action:
+
+```shell
+ghe-webhook-logs --event issues.opened
 To show all failed hook deliveries in the past day:
 
 ```shell
@@ -1286,13 +1296,6 @@ In this example, `ghe-repl-status -vv` sends verbose status information from a r
 ### ghe-check-background-upgrade-jobs
 
 During an upgrade to a feature release, this utility displays the status of background jobs on {% data variables.location.product_location %}. If you're running back-to-back upgrades, you should use this utility to check that all background jobs are complete before proceeding with the next upgrade.
-
-{% ifversion ghes < 3.12 %}
-
-> [!NOTE]
-> To use `ghe-check-background-upgrade-jobs` with {% data variables.product.prodname_ghe_server %} {{ allVersions[currentVersion].currentRelease }}, your instance must run version {{ allVersions[currentVersion].currentRelease }}.{% ifversion ghes = 3.10 %}4{% elsif ghes = 3.11 %}1{% endif %} or later.
-
-{% endif %}
 
 ```shell
 ghe-check-background-upgrade-jobs
