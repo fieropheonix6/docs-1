@@ -23,6 +23,15 @@
       },
       {
         "category": "enterprise-admin",
+        "slug": "promote-a-custom-property-to-an-enterprise",
+        "subcategory": "custom-properties",
+        "verb": "put",
+        "requestPath": "/enterprises/{enterprise}/properties/schema/organizations/{org}/{custom_property_name}/promote",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "enterprise-admin",
         "slug": "get-a-custom-property-for-an-enterprise",
         "subcategory": "custom-properties",
         "verb": "get",
@@ -750,6 +759,24 @@
         "subcategory": "rules",
         "verb": "delete",
         "requestPath": "/orgs/{org}/rulesets/{ruleset_id}",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "orgs",
+        "slug": "get-organization-ruleset-history",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "orgs",
+        "slug": "get-organization-ruleset-version",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}",
         "additional-permissions": false,
         "access": "write"
       },
@@ -1666,7 +1693,7 @@
     "displayTitle": "Organization permissions for \"Network configurations\"",
     "permissions": [
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "list-hosted-compute-network-configurations-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -1675,7 +1702,7 @@
         "access": "read"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "create-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "post",
@@ -1684,7 +1711,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "get-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -1693,7 +1720,7 @@
         "access": "read"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "update-a-hosted-compute-network-configuration-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "patch",
@@ -1702,7 +1729,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "delete-a-hosted-compute-network-configuration-from-an-organization",
         "subcategory": "network-configurations",
         "verb": "delete",
@@ -1711,7 +1738,7 @@
         "access": "write"
       },
       {
-        "category": "settings",
+        "category": "orgs",
         "slug": "get-a-hosted-compute-network-settings-resource-for-an-organization",
         "subcategory": "network-configurations",
         "verb": "get",
@@ -4179,6 +4206,24 @@
         "subcategory": "rules",
         "verb": "delete",
         "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "repos",
+        "slug": "get-repository-ruleset-history",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history",
+        "additional-permissions": false,
+        "access": "write"
+      },
+      {
+        "category": "repos",
+        "slug": "get-repository-ruleset-version",
+        "subcategory": "rules",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}",
         "additional-permissions": false,
         "access": "write"
       },
@@ -7757,10 +7802,55 @@
     "permissions": [
       {
         "category": "secret-scanning",
+        "slug": "list-bypass-requests-for-secret-scanning-for-an-org",
+        "subcategory": "delegated-bypass",
+        "verb": "get",
+        "requestPath": "/orgs/{org}/bypass-requests/secret-scanning",
+        "additional-permissions": false,
+        "access": "read"
+      },
+      {
+        "category": "secret-scanning",
         "slug": "list-secret-scanning-alerts-for-an-organization",
         "subcategory": "secret-scanning",
         "verb": "get",
         "requestPath": "/orgs/{org}/secret-scanning/alerts",
+        "additional-permissions": false,
+        "access": "read"
+      },
+      {
+        "category": "secret-scanning",
+        "slug": "list-bypass-requests-for-secret-scanning-for-a-repository",
+        "subcategory": "delegated-bypass",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/bypass-requests/secret-scanning",
+        "additional-permissions": false,
+        "access": "read"
+      },
+      {
+        "category": "secret-scanning",
+        "slug": "get-a-bypass-request-for-secret-scanning",
+        "subcategory": "delegated-bypass",
+        "verb": "get",
+        "requestPath": "/repos/{owner}/{repo}/bypass-requests/secret-scanning/{bypass_request_number}",
+        "additional-permissions": false,
+        "access": "read"
+      },
+      {
+        "category": "secret-scanning",
+        "slug": "review-a-bypass-request-for-secret-scanning",
+        "subcategory": "delegated-bypass",
+        "verb": "patch",
+        "requestPath": "/repos/{owner}/{repo}/bypass-requests/secret-scanning/{bypass_request_number}",
+        "additional-permissions": false,
+        "access": "read"
+      },
+      {
+        "category": "secret-scanning",
+        "slug": "dismiss-a-response-on-a-bypass-request-for-secret-scanning",
+        "subcategory": "delegated-bypass",
+        "verb": "delete",
+        "requestPath": "/repos/{owner}/{repo}/bypass-responses/secret-scanning/{bypass_response_id}",
         "additional-permissions": false,
         "access": "read"
       },

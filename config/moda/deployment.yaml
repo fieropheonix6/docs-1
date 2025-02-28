@@ -7,6 +7,33 @@ environments:
       profile: general
       region: iad
 
+  - name: staging-cedar
+    require_pipeline: false
+    notify_still_locked: true # Notify last person to lock this after an hour
+    secret_environment: production
+    required_review_tasks: []
+    cluster_selector:
+      profile: general
+      region: iad
+
+  - name: staging-pine
+    require_pipeline: false
+    notify_still_locked: true # Notify last person to lock this after an hour
+    secret_environment: production
+    required_review_tasks: []
+    cluster_selector:
+      profile: general
+      region: iad
+
+  - name: staging-spruce
+    require_pipeline: false
+    notify_still_locked: true # Notify last person to lock this after an hour
+    secret_environment: production
+    required_review_tasks: []
+    cluster_selector:
+      profile: general
+      region: iad
+
 required_builds:
   - docs-internal-moda-config-bundle / docs-internal-moda-config-bundle
   - docs-internal-docker-image / docs-internal-docker-image
@@ -23,13 +50,9 @@ pipelines:
     stages:
       - name: full_production
         kind: deployment
-        start_message: We are now going to deploy {{app}}/{{ref}}! Please pause or cancel the pipeline after the deploy if you want more time before auto-merging your pull request(s).
         config:
           environment: production
           timeout: 1200
-        # gates:
-        #   - kind: timer
-        #     duration: 1200
 
 notifications:
   slack_channels:

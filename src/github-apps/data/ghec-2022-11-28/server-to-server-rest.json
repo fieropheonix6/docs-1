@@ -2253,6 +2253,12 @@
       "requestPath": "/enterprises/{enterprise}/properties/schema"
     },
     {
+      "slug": "promote-a-custom-property-to-an-enterprise",
+      "subcategory": "custom-properties",
+      "verb": "put",
+      "requestPath": "/enterprises/{enterprise}/properties/schema/organizations/{org}/{custom_property_name}/promote"
+    },
+    {
       "slug": "get-a-custom-property-for-an-enterprise",
       "subcategory": "custom-properties",
       "verb": "get",
@@ -3489,6 +3495,18 @@
       "requestPath": "/orgs/{org}/rulesets/{ruleset_id}"
     },
     {
+      "slug": "get-organization-ruleset-history",
+      "subcategory": "rules",
+      "verb": "get",
+      "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history"
+    },
+    {
+      "slug": "get-organization-ruleset-version",
+      "subcategory": "rules",
+      "verb": "get",
+      "requestPath": "/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}"
+    },
+    {
       "slug": "list-security-manager-teams",
       "subcategory": "security-managers",
       "verb": "get",
@@ -3505,6 +3523,42 @@
       "subcategory": "security-managers",
       "verb": "delete",
       "requestPath": "/orgs/{org}/security-managers/teams/{team_slug}"
+    },
+    {
+      "slug": "list-hosted-compute-network-configurations-for-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "get",
+      "requestPath": "/orgs/{org}/settings/network-configurations"
+    },
+    {
+      "slug": "create-a-hosted-compute-network-configuration-for-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "post",
+      "requestPath": "/orgs/{org}/settings/network-configurations"
+    },
+    {
+      "slug": "get-a-hosted-compute-network-configuration-for-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "get",
+      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
+    },
+    {
+      "slug": "update-a-hosted-compute-network-configuration-for-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "patch",
+      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
+    },
+    {
+      "slug": "delete-a-hosted-compute-network-configuration-from-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "delete",
+      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
+    },
+    {
+      "slug": "get-a-hosted-compute-network-settings-resource-for-an-organization",
+      "subcategory": "network-configurations",
+      "verb": "get",
+      "requestPath": "/orgs/{org}/settings/network-settings/{network_settings_id}"
     },
     {
       "slug": "enable-or-disable-a-security-feature-for-an-organization",
@@ -4587,6 +4641,18 @@
       "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}"
     },
     {
+      "slug": "get-repository-ruleset-history",
+      "subcategory": "rules",
+      "verb": "get",
+      "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history"
+    },
+    {
+      "slug": "get-repository-ruleset-version",
+      "subcategory": "rules",
+      "verb": "get",
+      "requestPath": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}"
+    },
+    {
       "slug": "list-repository-tags",
       "subcategory": "repos",
       "verb": "get",
@@ -4857,44 +4923,6 @@
       "subcategory": "repository-advisories",
       "verb": "post",
       "requestPath": "/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks"
-    }
-  ],
-  "settings": [
-    {
-      "slug": "list-hosted-compute-network-configurations-for-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/settings/network-configurations"
-    },
-    {
-      "slug": "create-a-hosted-compute-network-configuration-for-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "post",
-      "requestPath": "/orgs/{org}/settings/network-configurations"
-    },
-    {
-      "slug": "get-a-hosted-compute-network-configuration-for-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
-    },
-    {
-      "slug": "update-a-hosted-compute-network-configuration-for-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "patch",
-      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
-    },
-    {
-      "slug": "delete-a-hosted-compute-network-configuration-from-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/settings/network-configurations/{network_configuration_id}"
-    },
-    {
-      "slug": "get-a-hosted-compute-network-settings-resource-for-an-organization",
-      "subcategory": "network-configurations",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/settings/network-settings/{network_settings_id}"
     }
   ],
   "teams": [
