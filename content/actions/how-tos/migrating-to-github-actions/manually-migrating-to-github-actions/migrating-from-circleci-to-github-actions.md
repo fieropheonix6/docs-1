@@ -5,7 +5,7 @@ redirect_from:
   - /actions/learn-github-actions/migrating-from-circleci-to-github-actions
   - /actions/migrating-to-github-actions/migrating-from-circleci-to-github-actions
   - /actions/migrating-to-github-actions/manual-migrations/migrating-from-circleci-to-github-actions
-  - /actions/migrating-to-github-actions/manually-migrating-to-github-actions/migrating-from-circleci-to-githib-actions
+  - /actions/migrating-to-github-actions/manually-migrating-to-github-actions/migrating-from-circleci-to-github-actions
 versions:
   fpt: '*'
   ghes: '*'
@@ -67,7 +67,7 @@ For more information about the tools and packages available on {% data variables
 
 CircleCI and {% data variables.product.prodname_actions %} support setting variables in the configuration file and creating secrets using the CircleCI or {% data variables.product.github %} UI.
 
-For more information, see [AUTOTITLE](/actions/learn-github-actions/variables#default-environment-variables) and [AUTOTITLE](/actions/security-guides/using-secrets-in-github-actions).
+For more information, see [AUTOTITLE](/actions/reference/variables-reference#default-environment-variables) and [AUTOTITLE](/actions/security-guides/using-secrets-in-github-actions).
 
 ## Caching
 

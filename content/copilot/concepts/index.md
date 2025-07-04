@@ -10,11 +10,8 @@ children:
   - /copilot-billing
   - /prompt-engineering-for-copilot-chat
   - /about-customizing-github-copilot-chat-responses
-  - /about-assigning-tasks-to-copilot
+  - /about-copilot-coding-agent
   - /indexing-repositories-for-copilot-chat
   - /about-organizing-and-sharing-context-with-copilot-spaces
   - /build-copilot-extensions
-redirect_from:
-  - /copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/billing-and-payments
 ---
-

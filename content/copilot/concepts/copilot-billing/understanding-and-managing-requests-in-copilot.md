@@ -16,7 +16,7 @@ redirect_from:
 > [!IMPORTANT]
 > * Billing for premium requests began on June 18, 2025 for all paid {% data variables.product.prodname_copilot_short %} plans, and the request counters were only set to zero for paid plans.
 > * {% data reusables.copilot.data-residency-availability %}
-> * Premium request counters reset on the 1st of each month. See [AUTOTITLE](/copilot/managing-copilot/understanding-and-managing-copilot-usage/monitoring-your-copilot-usage-and-entitlements).
+> * Premium request counters reset on the 1st of each month at 00:00:00 UTC. See [AUTOTITLE](/copilot/managing-copilot/understanding-and-managing-copilot-usage/monitoring-your-copilot-usage-and-entitlements).
 > * Certain requests may experience rate limits to accommodate high demand. Rate limits restrict the number of requests that can be made within a specific time period.
 
 ## What is a request?
@@ -29,17 +29,16 @@ Some {% data variables.product.prodname_copilot_short %} features use more advan
 
 ### Premium features
 
-The following {% data variables.product.prodname_copilot_short %} features can use premium requests:
+The following {% data variables.product.prodname_copilot_short %} features can use premium requests.
 
-* [{% data variables.copilot.copilot_chat_short %}](/copilot/using-github-copilot/copilot-chat)
-* [{% data variables.copilot.copilot_coding_agent %}](/copilot/using-github-copilot/coding-agent/about-assigning-tasks-to-copilot) [^1]
-* [Agent mode in {% data variables.copilot.copilot_chat_short %}](/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#copilot-edits) [^2]
-* [{% data variables.product.prodname_copilot_short %} code review](/copilot/using-github-copilot/code-review/using-copilot-code-review)
-* [{% data variables.copilot.copilot_extensions_short %}](/copilot/building-copilot-extensions/about-building-copilot-extensions)
-* [{% data variables.copilot.copilot_spaces %}](/copilot/using-github-copilot/copilot-spaces/about-organizing-and-sharing-context-with-copilot-spaces)
-
-[^1]: {% data variables.copilot.copilot_coding_agent %} uses a fixed multiplier of 1 for the premium requests it uses, and may use multiple premium requests in response to one user prompt.
-[^2]: Agent mode uses one premium request per user prompt, multiplied by the model's rate.
+| Feature | Premium request consumption |
+| ------- | ----------- |
+| [{% data variables.copilot.copilot_chat_short %}](/copilot/using-github-copilot/copilot-chat) | {% data variables.copilot.copilot_chat_short %} uses **one premium request** per user prompt, multiplied by the model's rate. |
+| [{% data variables.copilot.copilot_coding_agent %}](/copilot/concepts/about-copilot-coding-agent) | {% data variables.copilot.copilot_coding_agent %} will make multiple premium requests to complete a single task. On average, {% data variables.copilot.copilot_coding_agent %} uses **30-50 premium requests** each time it is invoked. The exact number of premium requests will vary depending on the task’s complexity and the number of required steps. {% data variables.copilot.copilot_coding_agent %} uses a fixed multiplier of 1 for the premium requests it uses. |
+| [Agent mode in {% data variables.copilot.copilot_chat_short %}](/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#copilot-edits) | Agent mode uses **one premium request** per user prompt, multiplied by the model's rate. |
+| [{% data variables.product.prodname_copilot_short %} code review](/copilot/using-github-copilot/code-review/using-copilot-code-review) | When you assign {% data variables.product.prodname_copilot_short %} as a reviewer for a pull request, **one premium request** is used each time {% data variables.product.prodname_copilot_short %} posts comments to the pull request. |
+| [{% data variables.copilot.copilot_extensions_short %}](/copilot/building-copilot-extensions/about-building-copilot-extensions) | {% data variables.copilot.copilot_extensions_short %} uses **one premium request** per user prompt, multiplied by the model's rate. |
+| [{% data variables.copilot.copilot_spaces %}](/copilot/using-github-copilot/copilot-spaces/about-organizing-and-sharing-context-with-copilot-spaces) | {% data variables.copilot.copilot_spaces %} uses **one premium request** per user prompt, multiplied by the model's rate. |
 
 ## How do request allowances work per plan?
 
@@ -87,6 +86,8 @@ Each model has a premium request multiplier, based on its complexity and resourc
 
 If you use **{% data variables.copilot.copilot_free_short %}**, you have access to a limited number of models, and each model will consume one premium request when used. For example, if you make a request using the {% data variables.copilot.copilot_o3_mini %} model, your interaction will consume **one premium request**, not 0.33 premium requests.
 
+{% rowheaders %}
+
 | Model                                                                   | Multiplier for **paid plans**  | Multiplier for **{% data variables.copilot.copilot_free_short %}** |
 |-------------------------------------------------------------------------|--------------------------------|-----------------------|
 | {% data variables.copilot.copilot_gpt_41 %}                             | 0                              | 1                     |
@@ -103,6 +104,8 @@ If you use **{% data variables.copilot.copilot_free_short %}**, you have access 
 | {% data variables.copilot.copilot_o3 %}                                 | 1                              | Not applicable        |
 | {% data variables.copilot.copilot_o3_mini %}                            | 0.33                           | 1                     |
 | {% data variables.copilot.copilot_o4_mini %}                            | 0.33                           | Not applicable        |
+
+{% endrowheaders %}
 
 ## Examples of premium request usage
 
